@@ -1,57 +1,12 @@
-/**
-*
-*
-*/
-html, body {
-	padding: 0;
-	margin: 0;
-	height: 100%;
-	font-size: 16px;
-	background: #ed5565;
-	color: #fff;
-	font-family: 'Source Sans Pro'; 
-}
+.m { margin: 100px; }
 
-h1 {
-	font-size: 2.8em;
-	font-weight: 700;
-	letter-spacing: -1px;
-	margin: 0.6rem 0; 
-}
-h1 > span {font-weight: 300; }
-h2 {
-	font-size: 1.15em;
-	font-weight: 300;
-	margin: 0.3rem 0; 
-}
-main {
-	width: 95%;
-	max-width: 1000px;
-	margin: 4em auto;
-	opacity: 0; 
-}
-main.loaded {transition: opacity .25s linear;opacity: 1; }
-main header {width: 100%; }
-main header > div {width: 50%; }
-main header > .left, main header > .right {height: 100%; }
-main .loaders {
-	width: 100%;
-	box-sizing: border-box;
-	display: flex;
-	flex: 0 1 auto;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-main .loaders .loader {
-	box-sizing: border-box;
-	display: flex;
-	flex: 0 1 auto;
-	flex-direction: column;
-	flex-grow: 1;
-	flex-shrink: 0;
-	flex-basis: 25%;
-	max-width: 25%;
-	height: 200px;
-	align-items: center;
-	justify-content: center;
-}
+.tab { width: 400px; margin: 0 auto; border: 1px solid #ddd; height: 40px; text-align: center; line-height: 40px; background: #fff; border-radius: 10px; overflow: hidden; }
+.tab li { float: left; width: 100px; position: relative; overflow: hidden; }
+.tab li:before, .tab li:after, .tab li a { -webkit-transition: all 0.25s ease-in-out; transition: all 0.25s ease-in-out; }
+.tab li:before, .tab li:after { content: ""; display: block; }
+.tab li:not(:first-child):after { background: #ddd; height: 20px; width: 1px; left: 0; top: 10px; position: absolute; }
+.tab li a { display: block; position: relative; z-index: 2; color: #000; font-size: 14px; }
+.tab li:before { width: 0; height: 0; top: 50%; left: 50%; z-index: 1; position: absolute; }
+.tab li:hover a { color: #fff; }
+.tab li:hover:before { box-shadow: 0 0 0 100px #36bc99; }
+.tab li:hover + li:after, .tab li:hover:after { height: 0; top: 20px; }
