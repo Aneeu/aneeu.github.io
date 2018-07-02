@@ -1,12 +1,71 @@
-.m { margin: 100px; }
-
-.tab { width: 400px; margin: 0 auto; border: 1px solid #ddd; height: 40px; text-align: center; line-height: 40px; background: #fff; border-radius: 10px; overflow: hidden; }
-.tab li { float: left; width: 100px; position: relative; overflow: hidden; }
-.tab li:before, .tab li:after, .tab li a { -webkit-transition: all 0.25s ease-in-out; transition: all 0.25s ease-in-out; }
-.tab li:before, .tab li:after { content: ""; display: block; }
-.tab li:not(:first-child):after { background: #ddd; height: 20px; width: 1px; left: 0; top: 10px; position: absolute; }
-.tab li a { display: block; position: relative; z-index: 2; color: #000; font-size: 14px; }
-.tab li:before { width: 0; height: 0; top: 50%; left: 50%; z-index: 1; position: absolute; }
-.tab li:hover a { color: #fff; }
-.tab li:hover:before { box-shadow: 0 0 0 100px #36bc99; }
-.tab li:hover + li:after, .tab li:hover:after { height: 0; top: 20px; }
+body
+{
+    background-image: url(./images/bg3.jpg);  /*设置背景图片*/
+    background-size: cover;              /*背景图覆盖方式*/
+}
+h1
+{
+    letter-spacing: 8px;               /*文字间距*/
+    font-size: 33px;
+}
+ul
+{
+    display: inline-block;
+    list-style-type: none;       /*去掉导航文字前边的·*/
+}
+li
+{
+    float: left;    /*左侧浮动布局*/
+}
+li a
+{
+    text-decoration: none;  /* 去掉导航文字的下划线*/
+    font-size: larger;
+}
+li + li
+{
+    margin-left: 20px;       /*导航之间距离*/
+}
+li a, .dropbtn               /*可以下拉的导航键的文字格式*/
+{   /*设置下弹按钮格式*/
+    display: block;         /*让（对象）LI排成一行*/
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 10px;     /*内边距*/
+}
+li a:hover,.dropdown:hover.dropbtn    /*鼠标移动到 a 的样式*/
+{
+    background-color: yellowgreen;
+}
+.dropdown
+{
+    display: inline-block;
+}
+.dropdown a
+{
+    font-size: larger
+}
+.dropdown-content                   /*下拉内容样式*/
+{
+    display: none;
+    position: absolute;
+    background-color: yellowgreen;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);   /*下拉出来的窗口的盒子格式*/
+}
+.dropdown-content a                /*下拉内容的文字样式*/
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover          /*下拉出来的内容的（文字）鼠标悬停后的样式*/
+{
+    background-color: yellow;
+}
+.dropdown:hover .dropdown-content
+{
+    display: block
+}

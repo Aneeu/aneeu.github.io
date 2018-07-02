@@ -2,15 +2,24 @@
 <head>
     <meta charset="utf-8">
     <title>导航栏</title>
+    <link rel="stylesheet" href="css/test1.css" type="text/css">
 </head>
 <body>
-    <div class="m">
+<h1 align="center">Aneeu's Personal Website</h1>
         <ul>
             <li><a href="https://aneeu.github.io/">Home Page</a></li>
             <li><a href="https://www.cnblogs.com/">Blog</a></li>
             <li><a href="share.html">Resource Sharing</a></li>
-            <li><a href="">Contact Me</a></li>
+            <div class="dropdown">                            <!--设置导航下拉-->
+                <a href="" class="dropbtn">Contact Me</a>     <!--要下拉的文字-->
+                <div class="dropdown-content">                <!--下拉后现实的内容-->
+                    <a href="">电话</a>                       <!--下拉内容链接-->
+                    <a href="">邮件</a>
+                    <a href="">QQ</a>
+                </div>
+            </div>
         </ul>
-    </div>
+        <div style="padding: 0 16px">
+
 </body>
 </html>
