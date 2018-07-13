@@ -1,7 +1,7 @@
 body
 {
     background-image: url(./images/bg2.jpg);  /*设置背景图片*/
-    background-size: cover;              /*背景图覆盖方式*/
+    background-size: 100% 100%;              /*背景图覆盖方式*/
     background-repeat: no-repeat;
 }
 h1
