@@ -1,0 +1,13 @@
+body
+{
+    background-image: url(./images/bg2.jpg);  /*设置背景图片*/
+    background-size: cover;              /*背景图覆盖方式*/
+    background-repeat: no-repeat;
+}
+h1
+{
+    letter-spacing: 0.5rem;               /*文字间距*/
+    font-size: 2.06rem;
+    color: cornsilk;
+    margin-top: 4rem;
+}
