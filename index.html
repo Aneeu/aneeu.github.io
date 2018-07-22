@@ -17,11 +17,11 @@
             <li><a href="https://www.cnblogs.com/" title="博客">Blog</a></li>
             <li><a href="share.html"title="个人整理的小经验">Resource Sharing</a></li>
             <div class="dropdown">                                     <!--设置导航下拉  DIV class在CSS用.，ID用 # -->
-                <a href="" class="dropbtn" title="请通过一下方式联系我">Contact Me</a>              <!--要下拉的文字-->
+                <a href="" class="dropbtn" title="请通过以下方式联系我">Contact Me</a>              <!--要下拉的文字-->
                 <div class="dropdown-content">                         <!--下拉后显示的内容-->
                     <a href="tel:10086" title="千万别点">tel</a>                                 <!--下拉内容链接-->
-                    <a href="mailto:t147vip@gmail.com">email</a>
-                    <a href="">QQ</a>
+                    <a href="mailto:t147vip@gmail.com">email</a>        <!--这里面有个关于设备默认邮件程序的问题-->
+                    <a href=""> 新浪微博</a>
                 </div>
             </div>
         </ul>
@@ -48,8 +48,34 @@
     </tr>
 </table>
 
+            <div id="body">
+                <!--漂浮图片 借鉴，还不太懂原理-->
+                <div id="float_AD" style="position:absolute;z-index:1000;" onmouseover="window.clearInterval(timer)" onmouseout="timer=window.setInterval('changePos()',delay);">
+                    <a href="" title="感谢扫码赞助！！"><img src="css/images/bg8.jpg" style="width:200px; height:200px;" /></a>
+                    <span style="CURSOR:hand;color:red;font-weight:bold" onclick="clearInterval(timer);obj.style.visibility = 'hidden'">X</span>
+                </div>
+                <script type="text/javascript" language="JavaScript">
+                    var obj=document.getElementById("float_AD");
+                    var clientHeight=document.documentElement.clientHeight;
+                    var clientWidth=document.documentElement.clientWidth;
+                    var timer; var delay= 20;//移动速度
+                    function randomNum(size){ return Math.floor(Math.random()*(size-160+1)); }
+                    obj.style.top=randomNum(clientHeight)+"px";
+                    obj.style.left=randomNum(clientWidth)+"px";
+                    var y=parseInt(obj.style.top);
+                    var x=parseInt(obj.style.left);
+                    var flagX=false; var flagY=true;
+                    function moveY(){ if(flagY){ y++; if(y>clientHeight-160){ flagY=false; } }else{ y--; if(y<0){ flagY=true; } } obj.style.top=y+"px"; }
+                    function moveX(){ if(flagX){ x++; if(x>clientWidth-160){ flagX=false; } }else{ x--; if(x<0){ flagX=true; } } obj.style.left=x+"px"; }
+                    window.onresize=function(){ clientHeight=document.documentElement.clientHeight; clientWidth=document.documentElement.clientWidth; }
+                    function changePos(){moveY();moveX(); }
+                    function creatTimer(){timer = window.setInterval("changePos();",delay); }
+                    function hide() {obj.style.display = "none";
+                        obj.onmouseout = function() {obj.style.visibility = "hidden";}}
+                    var url = window.location.href;if (true) {creatTimer();} else {hide();}// url == "http://www.xxxxx.cn/"
+                </script>
 
             <img src="css/images/bg6.jpg" >                            <!--插入图片-->
-            <address style="font-size: large"><!--这个是该地址标签格式的--><a href="https:baidu.com">地址标签，可以放如邮件等链接</a> </address>
+            <address style="font-size: large"><!--这个是该地址标签格式的--><a href="https://www.baidu.com/" target="_blank">地址标签，可以放如邮件等链接</a> </address>
 </body>
 </html>
