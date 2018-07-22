@@ -1,14 +1,25 @@
 body
 {
-    background-image: url(./images/bg2.jpg);  /*设置背景图片*/
-    background-size: 100% 100%;              /*背景图覆盖方式*/
+    /*background-image: url(./images/bg3.jpg);*/  /*设置背景图片*/
+    background-size: 100% 100%;              /*背景图覆盖方式  还要再学*/
     background-repeat: no-repeat;
+    background-color: cadetblue;
 }
 h1
 {
     letter-spacing: 0.5rem;               /*文字间距*/
     font-size: 2.06rem;
     color: cornsilk;
+}
+h1 a
+{
+    text-decoration: none;
+}
+.p1
+{
+    color: goldenrod;
+    font-size: 28px;
+    letter-spacing: 0.5rem;
 }
 ul
 {
@@ -31,7 +42,7 @@ li + li
 li a, .dropbtn               /*可以下拉的导航键的文字格式*/
 {   /*设置下弹按钮格式*/
     display: block;         /*让（对象）LI排成一行*/
-    color: white;           /*所有导航栏字体颜色*/
+    color: black;           /*所有导航栏字体颜色*/
     text-align: center;
     text-decoration: none;
     padding: 1.25rem 0.625rem;     /*内边距*/
