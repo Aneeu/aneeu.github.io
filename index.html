@@ -50,14 +50,14 @@
 
                 <!--漂浮图片 借鉴，还不太懂原理-->
                 <div id="float_AD" style="position:absolute;z-index:1000;" onmouseover="window.clearInterval(timer)" onmouseout="timer=window.setInterval('changePos()',delay);">
-                    <a href="" title="感谢扫码赞助！！"><img src="css/images/0.jpg" style="width:8rem; height: 8rem " /></a>
+                    <a href="" title="感谢扫码赞助！！"><img src="css/images/0.jpg" style="width:9rem; height: 9rem " /></a>
                     <span style="CURSOR:hand;color:red;font-weight:bold" onclick="clearInterval(timer);obj.style.visibility = 'hidden'">X</span>
                 </div>
                 <script type="text/javascript" language="JavaScript">
                     var obj=document.getElementById("float_AD");
                     var clientHeight=document.documentElement.clientHeight;
                     var clientWidth=document.documentElement.clientWidth;
-                    var timer; var delay= 16;//移动速度
+                    var timer; var delay= 15;//移动速度
                     function randomNum(size){ return Math.floor(Math.random()*(size-160+1)); }
                     obj.style.top=randomNum(clientHeight)+"px";
                     obj.style.left=randomNum(clientWidth)+"px";
